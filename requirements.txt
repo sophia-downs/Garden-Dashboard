@@ -6,4 +6,4 @@ openmeteo-requests
 retry-requests
 pandas
 Pillow
-#rasa
+rasa
