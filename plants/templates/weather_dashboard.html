@@ -1,0 +1,34 @@
+{% extends "new_base_generic.html" %}
+
+{% block content %}
+<div class="weather-dashboard">
+    <div class="overlay">
+        <h1>Weekly Weather Forecast</h1>
+    </div>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <div class="current-day-card">
+            <h3>Today's Weather</h3>
+            <p>Current Temp: {{ current_temp }}°F</p>
+            <p>Max Temp: {{ max_temp }}°F</p>
+            <p>Min Temp: {{ min_temp }}°F</p>
+            <p>Precipitation Probability: {{ precipitation_probability_today }}%</p>
+            <p>Soil Temperature at 6cm: {{ soil_temperature_today }}°F</p>
+        </div>
+        <div class="forecast-cards">
+            {% for day in weekly_forecast%}
+            <div class="forecast-card">
+                <h3>{{ day.date }}</h3>
+                <p>Max Temp: {{ day.max_temp }}°F</p>
+                <p>Min Temp: {{ day.min_temp }}°F</p>
+                <p>Precipitation Probability: {{ day.precipitation_probability }}%</p>
+                <p>Soil Temperature: {{ day.soil_temperature }}°F</p>
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+

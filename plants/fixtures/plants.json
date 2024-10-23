@@ -1,0 +1,367 @@
+[
+    {
+        "model": "plants.plant",
+        "pk": 1,
+        "fields": {
+            "name": "Rose",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Shrub",
+            "care_instructions": "Prune regularly to encourage blooming.",
+            "image": "plant_images/rose.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 2,
+        "fields": {
+            "name": "Tulip",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Low",
+            "growth_habit": "Bulb",
+            "care_instructions": "Plant bulbs in the fall.",
+            "image": "plant_images/tulip.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 3,
+        "fields": {
+            "name": "Tomato",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "High",
+            "growth_habit": "Vine",
+            "care_instructions": "Stake plants and water consistently.",
+            "image": "plant_images/tomato.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 4,
+        "fields": {
+            "name": "Basil",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Herb",
+            "care_instructions": "Pinch off flowers to encourage leaf growth.",
+            "image": "plant_images/basil.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 5,
+        "fields": {
+            "name": "Lavender",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Low",
+            "growth_habit": "Shrub",
+            "care_instructions": "Prune after flowering to maintain shape.",
+            "image": "plant_images/lavender.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 6,
+        "fields": {
+            "name": "Sunflower",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Annual",
+            "care_instructions": "Provide support as they grow tall.",
+            "image": "plant_images/sunflower.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 7,
+        "fields": {
+            "name": "Carrot",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Root Vegetable",
+            "care_instructions": "Thin seedlings to prevent overcrowding.",
+            "image": "plant_images/carrot.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 8,
+        "fields": {
+            "name": "Strawberry",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Perennial",
+            "care_instructions": "Mulch to keep soil moist and control weeds.",
+            "image": "plant_images/strawberry.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 9,
+        "fields": {
+            "name": "Lettuce",
+            "sun_exposure": "Partial Shade",
+            "water_requirements": "High",
+            "growth_habit": "Leafy Vegetable",
+            "care_instructions": "Harvest leaves regularly to encourage growth.",
+            "image": "plant_images/lettuce.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 10,
+        "fields": {
+            "name": "Mint",
+            "sun_exposure": "Partial Shade",
+            "water_requirements": "Moderate",
+            "growth_habit": "Herb",
+            "care_instructions": "Contain to prevent spreading.",
+            "image": "plant_images/mint.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 11,
+        "fields": {
+            "name": "Cucumber",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "High",
+            "growth_habit": "Vine",
+            "care_instructions": "Provide a trellis for support.",
+            "image": "plant_images/cucumber.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 12,
+        "fields": {
+            "name": "Peach",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Tree",
+            "care_instructions": "Prune annually to maintain shape.",
+            "image": "plant_images/peach.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 13,
+        "fields": {
+            "name": "Zinnia",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Low",
+            "growth_habit": "Annual",
+            "care_instructions": "Deadhead to encourage more blooms.",
+            "image": "plant_images/zinnia.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 14,
+        "fields": {
+            "name": "Daffodil",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Bulb",
+            "care_instructions": "Allow foliage to die back naturally.",
+            "image": "plant_images/daffodil.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 15,
+        "fields": {
+            "name": "Spinach",
+            "sun_exposure": "Partial Shade",
+            "water_requirements": "High",
+            "growth_habit": "Leafy Vegetable",
+            "care_instructions": "Harvest leaves regularly to encourage growth.",
+            "image": "plant_images/spinach.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 16,
+        "fields": {
+            "name": "Blueberry",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "High",
+            "growth_habit": "Shrub",
+            "care_instructions": "Prune to maintain shape and remove old wood.",
+            "image": "plant_images/blueberry.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 17,
+        "fields": {
+            "name": "Pepper",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Annual",
+            "care_instructions": "Stake plants to support heavy fruit.",
+            "image": "plant_images/pepper.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 18,
+        "fields": {
+            "name": "Apple",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Tree",
+            "care_instructions": "Prune annually and thin fruit to improve size.",
+            "image": "plant_images/apple.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 19,
+        "fields": {
+            "name": "Marigold",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Annual",
+            "care_instructions": "Deadhead regularly to prolong blooming.",
+            "image": "plant_images/marigold.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 20,
+        "fields": {
+            "name": "Cabbage",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Leafy Vegetable",
+            "care_instructions": "Protect from pests with row covers.",
+            "image": "plant_images/cabbage.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 21,
+        "fields": {
+            "name": "Raspberry",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Shrub",
+            "care_instructions": "Prune canes annually to encourage new growth.",
+            "image": "plant_images/raspberry.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 22,
+        "fields": {
+            "name": "Squash",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "High",
+            "growth_habit": "Vine",
+            "care_instructions": "Provide plenty of space for sprawling vines.",
+            "image": "plant_images/squash.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 23,
+        "fields": {
+            "name": "Petunia",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Annual",
+            "care_instructions": "Deadhead regularly to encourage blooming.",
+            "image": "plant_images/petunia.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 24,
+        "fields": {
+            "name": "Chili Pepper",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Annual",
+            "care_instructions": "Stake plants to support heavy fruit.",
+            "image": "plant_images/chili_pepper.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 25,
+        "fields": {
+            "name": "Pineapple",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Low",
+            "growth_habit": "Perennial",
+            "care_instructions": "Allow plenty of space for growth.",
+            "image": "plant_images/pineapple.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 26,
+        "fields": {
+            "name": "Eggplant",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Annual",
+            "care_instructions": "Provide support for heavy fruit.",
+            "image": "plant_images/eggplant.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 27,
+        "fields": {
+            "name": "Lemon",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Tree",
+            "care_instructions": "Prune to maintain shape and remove dead wood.",
+            "image": "plant_images/lemon.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 28,
+        "fields": {
+            "name": "Pumpkin",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "High",
+            "growth_habit": "Vine",
+            "care_instructions": "Provide plenty of space for sprawling vines.",
+            "image": "plant_images/pumpkin.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 29,
+        "fields": {
+            "name": "Broccoli",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Leafy Vegetable",
+            "care_instructions": "Harvest heads when firm and tight.",
+            "image": "plant_images/broccoli.jpg"
+        }
+    },
+    {
+        "model": "plants.plant",
+        "pk": 30,
+        "fields": {
+            "name": "Blackberry",
+            "sun_exposure": "Full Sun",
+            "water_requirements": "Moderate",
+            "growth_habit": "Shrub",
+            "care_instructions": "Prune canes annually to encourage new growth.",
+            "image": "plant_images/blackberry.jpg"
+        }
+    }
+]
+
+
+
+
+

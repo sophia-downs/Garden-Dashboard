@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    <div class="full-screen-container" style="background-image: url('{% static "icons/background.jpg" %}');">
+        <div class="content-overlay">
+            <div class="header">
+                <a href="{% url 'base_generic' %}" class="logo">Gardening App.</a>
+                <div class="nav-links">
+                    <a href="{% url 'plant_library' %}">Plant Library</a>
+                    <a href="{% url 'plant_care' %}">Plant Care</a>
+                    <a href="{% url 'weather_dashboard' %}">Weather Dashboard</a>
+                    <a href="{% url 'garden_ai' %}">Garden AI</a>
+                    <a href="{% url 'view_profile' %}">Account</a>
+                </div>
+            </div>
+            <div class="intro-content">
+                <h1>Find The Perfect Addition To Your Garden</h1>
+                <p>We will help you find plants that match your needs and style. Enjoy the application and surround yourself with greenery!</p>
+                <a href="{% url 'plant_library' %}" class="btn">Explore!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{% extends "new_base_generic.html" %}
+
+{% block content %}
+<div class="plant-library">
+    <div class="overlay">
+        <h1>Pick Your Plants!</h1>
+
+        <form method="get" action="" class="search-form" style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+            <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search plants..." style="flex-grow: 1; margin-right: 10px;">
+            <button type="submit" style="margin-right: 10px;">Search</button>
+            <button type="button" onclick="toggleFilters()" class="filter-toggle-btn">Filters</button>
+        </form>
+    
+        <div class="filters-container" id="filtersContainer" style="display: none;">
+            <form method="get" action="" class="filter-form">
+                {{ form.as_p }}
+                <button type="submit">Apply Filters</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="plant-cards">
+        {% for plant in plants %}
+        <div class="plant-card">
+            <h3>{{ plant.name }}</h3>
+            <img src="{{ plant.image.url }}" alt="{{ plant.name }}">
+            <p>Sun/Shade: {{ plant.sun_exposure }}</p>
+            <p>Water per day: {{ plant.water_requirements }}</p>
+            <p>Growth Habits: {{ plant.growth_habit }}</p>
+            <p>Care Instructions: {{ plant.care_instructions }}</p>
+            <button onclick="toggleUserPlant({{ plant.pk }}, this)" {% if plant.in_user_collection %}disabled{% endif %}>
+                {{ plant.in_user_collection|yesno:"Remove from Collection,Add to Collection" }}
+            </button>
+        </div>
+        {% endfor %}
+    </div>    
+</div>
+
+<script>
+function toggleFilters() {
+    var filters = document.getElementById('filtersContainer');
+    filters.style.display = filters.style.display === 'none' ? 'block' : 'none';
+}
+</script>
+
+<script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    function toggleUserPlant(plantId, buttonElement) {
+        const csrftoken = getCookie('csrftoken');
+        const action = buttonElement.textContent.includes("Add") ? 'add' : 'remove';
+
+    fetch(`/toggle_plant/${plantId}/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        },
+        body: JSON.stringify({action: action})
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success && action === 'add') {
+            buttonElement.textContent = 'Remove from Collection';
+            buttonElement.disabled = false;
+        } else if (data.success && action === 'remove') {
+            buttonElement.textContent = 'Add to Collection';
+            buttonElement.disabled = false;
+        } else {
+            alert(data.error || 'Failed to update collection.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while updating the collection.');
+    });
+}
+
+</script>
+{% endblock %}

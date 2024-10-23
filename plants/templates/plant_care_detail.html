@@ -1,0 +1,9 @@
+{% extends "new_base_generic.html" %}
+
+{% block content %}
+<div class="care-tip-detail">
+    <h2>{{ care_tip.title }}</h2>
+    <p>{{ care_tip.content }}</p>
+    <a href="{% url 'plant_care' %}" class="back-to-tips-btn">Back to Care Tips</a>
+</div>
+{% endblock %}

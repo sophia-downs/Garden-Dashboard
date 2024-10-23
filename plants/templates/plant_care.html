@@ -1,0 +1,20 @@
+{% extends "new_base_generic.html" %}
+
+{% block content %}
+<div class="plant-care">
+    <div class="overlay">
+        <h1>Plant Care Tips</h1>
+    </div>
+    
+    <div class="care-tips-grid">
+        {% for tip in care_tips %}
+        <div class="care-tip-widget">
+            <a href="{% url 'plant_care_detail' tip.id %}">
+                <h3>{{ tip.title }}</h3>
+                <p>{{ tip.description }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

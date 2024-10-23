@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Garden Dashboard{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: url('{% static "icons/background.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .content-overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.313); 
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-overlay"></div> 
+    <header>
+        <nav class="header-nav">
+            <a href="{% url 'base_generic' %}" class="logo">Gardening App.</a>
+            <div class="nav-links">
+                <a href="{% url 'plant_library' %}">Plant Library</a>
+                <a href="{% url 'plant_care' %}">Plant Care</a>
+                <a href="{% url 'weather_dashboard' %}">Weather Dashboard</a>
+                <a href="{% url 'garden_ai' %}">Garden AI</a>
+                <a href="{% url 'view_profile' %}">Account</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 Gardening App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

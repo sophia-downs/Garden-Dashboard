@@ -1,0 +1,25 @@
+{% extends "new_base_generic.html" %}
+
+{% block content %}
+<div class="garden-ai">
+    <div class="overlay">
+        <h1>Garden AI Assistant</h1>
+    </div>
+
+    <div class="overlay">
+        <form method="POST" action="{% url 'garden_ai' %}">
+            {% csrf_token %}
+            <input type="text" name="user_query" placeholder="Ask the AI..." required>
+            <button type="submit">Submit</button>
+        </form>
+    
+        {% if response %}
+        <div class="response">
+            <h2>AI Response</h2>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
+    </div>
+    
+</div>
+{% endblock %}

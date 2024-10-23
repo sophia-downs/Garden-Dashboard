@@ -1,0 +1,9 @@
+django
+django-debug-toolbar
+requests
+requests-cache
+openmeteo-requests
+retry-requests
+pandas
+Pillow
+rasa

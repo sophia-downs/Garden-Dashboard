@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 100,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:garden_dashboard}/db.sqlite3",
+            "name": "DB Plants"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "plants",
+            "database": "${workspaceFolder:garden_dashboard}/db.sqlite3"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
